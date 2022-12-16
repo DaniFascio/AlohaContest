@@ -11,10 +11,6 @@
 <body>
 <?php
 
-// servername => localhost
-// username => root
-// password => empty
-// database name => staff
 $host = "danifascio.ddns.net";
 $port = "54321";
 $dbname = "Aloha";
