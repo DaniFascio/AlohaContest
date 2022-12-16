@@ -6,12 +6,13 @@
 }
 
 .badge-subhead {
-  margin-bottom: 8px;
+  margin-top: 15px;
   padding: 10px 30px;
   background-color: rgba(116, 116, 116, 0.15);
   color: #747474;
   font-size: 14px;
   border-radius: 40px;
+
 }
 
 /* Filterable button */
@@ -453,11 +454,12 @@
 
 /* Footer */
 .vg-footer {
-  position: relative;
-  display: block;
+  /*height: 260px;*/
+  /*position: relative;*/
+  /*display: block;*/
   margin: 0;
-  padding: 35px 0;
-  background-color: #171925;
+  /*padding-top: 10px;*/
+  background-color: #000000;
   color: #9FA2AB;
 }
 
