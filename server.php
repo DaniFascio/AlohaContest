@@ -5,6 +5,9 @@
     <title>Insert Page page</title>
 </head>
 
+
+
+
 <body>
 <?php
 
@@ -28,9 +31,9 @@ if ($conn === false) {
 }
 
 // Taking all 5 values from the form data(input)
-$first_name = $_POST['nome'];
-$last_name = $_POST['cognome'];
-$email = $_POST['email'];
+$first_name = $_REQUEST['nome'];
+$last_name = $_REQUEST['cognome'];
+$email = $_REQUEST['email'];
 
 // Performing insert query execution
 // here our table name is college
