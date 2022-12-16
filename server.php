@@ -12,7 +12,14 @@
 // username => root
 // password => empty
 // database name => staff
-$conn = pg_connect("danifascio.ddns.net", "Aloha", "17062022", "aloha");
+$host = "danifascio.ddns.net";
+$port = "54321";
+$dbname = "Aloha";
+$user = "application_user";
+$password = "exp5689#";
+$connection_string = "host={$host} port={$port} dbname={$dbname} user={$user} password={$password} ";
+$conn = pg_connect($connection_string);
+
 
 // Check connection
 if ($conn === false) {
@@ -21,13 +28,13 @@ if ($conn === false) {
 }
 
 // Taking all 5 values from the form data(input)
-$first_name = $_REQUEST['nome'];
-$last_name = $_REQUEST['cognome'];
-$email = $_REQUEST['email'];
+$first_name = $_POST['nome'];
+$last_name = $_POST['cognome'];
+$email = $_POST['email'];
 
 // Performing insert query execution
 // here our table name is college
-$sql = "INSERT INTO users VALUES ('$first_name','$last_name', '$email')";
+$sql = "INSERT INTO anagrafica (nome,cognome,email) VALUES ('$first_name','$last_name', '$email')";
 
 if (pg_query($conn, $sql)) {
     echo "<h3>data stored in a database successfully."
